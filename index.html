@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos principales del documento -->
+  <meta charset="UTF-8">
+  <title>Explorador de Eventos JS</title>
+  <!-- Enlace a la hoja de estilos -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Contenedor principal que envuelve toda la página -->
+  <div class="layout">
+    <!-- Encabezado con título y breve introducción -->
+    <header class="hero">
+      <h1>Explorador de Eventos en JavaScript</h1>
+      <p class="hero__subtitle">
+        Interactúa con cada tarjeta para ver en acción distintos eventos del navegador.
+      </p>
+    </header>
+
+    <!-- Contenedor principal de las tarjetas de demostración -->
+    <main class="dashboard">
+      <!-- Sección del formulario con saludo y contador de letras -->
+      <section class="card card--form">
+        <h2>1. Formulario</h2>
+        <!-- Formulario que captura el nombre y envía el saludo -->
+        <form id="nameForm">
+          <!-- Campo de entrada para el nombre del usuario -->
+          <label for="nameInput">Nombre</label>
+          <input type="text" id="nameInput" placeholder="Escribe tu nombre" />
+          <!-- Botón que dispara el saludo -->
+          <button type="submit" class="btn btn--primary">Saludar</button>
+        </form>
+        <!-- Contador de letras ingresadas en el campo de nombre -->
+        <p id="charCount" class="info-tag">Letras escritas: 0</p>
+        <!-- Párrafo donde se mostrará el saludo generado -->
+        <p id="greeting" class="highlight"></p>
+        <!-- Botón para limpiar el saludo y el campo de texto -->
+        <button type="button" id="clearGreetingBtn" class="btn btn--ghost">Limpiar saludo</button>
+      </section>
+
+      <!-- Sección que demuestra eventos de mouse y cambio en select -->
+      <section class="card card--color">
+        <h2>2. Caja de color y selector</h2>
+        <!-- Caja que cambia de color con eventos de mouse -->
+        <div id="colorBox">Coloca el mouse aquí</div>
+        <!-- Selector para elegir un color personalizado -->
+        <label for="colorSelector">Selecciona un color</label>
+        <select id="colorSelector">
+          <option value="">-- Cambiar color --</option>
+          <option value="lightpink">Rosa</option>
+          <option value="lightgreen">Verde</option>
+          <option value="lightblue">Azul</option>
+        </select>
+      </section>
+
+      <!-- Sección que utiliza click y doble click en el mismo botón -->
+      <section class="card card--button">
+        <h2>3. Botón con doble función</h2>
+        <!-- Botón que muestra mensajes y aplica tachado según el evento -->
+        <button id="actionButton" class="btn btn--accent">Haz clic o doble clic</button>
+        <!-- Mensaje que refleja la interacción del usuario -->
+        <p id="clickMessage" class="info-tag"></p>
+      </section>
+
+      <!-- Sección que muestra las coordenadas actuales del mouse -->
+      <section class="card">
+        <h2>4. Movimiento del mouse</h2>
+        <p id="mouseCoords">Mueve el mouse aquí...</p>
+      </section>
+
+      <!-- Sección que detecta teclas pulsadas -->
+      <section class="card">
+        <h2>5. Teclas</h2>
+        <p id="keyDisplay">Presiona cualquier tecla...</p>
+      </section>
+
+      <!-- Sección que informa si la pestaña está activa u oculta -->
+      <section class="card">
+        <h2>6. Estado de la pestaña</h2>
+        <p id="visibilityStatus">La pestaña está activa.</p>
+      </section>
+
+      <!-- Sección que muestra el tamaño de la ventana y reacciona al scroll -->
+      <section class="card">
+        <h2>7. Tamaño de ventana y scroll</h2>
+        <p id="windowSize"></p>
+      </section>
+    </main>
+
+    <!-- Pie de página con instrucciones adicionales -->
+    <footer class="footer">
+      <p>Consejo: abre la consola del navegador (F12) para ver mensajes adicionales.</p>
+    </footer>
+  </div>
+
+  <!-- Inclusión del archivo JavaScript que controla los eventos -->
+  <script src="js/script.js"></script>
+</body>
+</html>

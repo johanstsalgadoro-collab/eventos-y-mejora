@@ -1,0 +1,240 @@
+/* Estilos generales para el cuerpo del documento */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0ea5e9 100%);
+  color: #0f172a;
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Contenedor principal que limita el ancho y aplica fondo claro */
+.layout {
+  background: #f8fafc;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.3);
+  width: min(1080px, 100%);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Encabezado principal con distribución vertical */
+.hero {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(59, 130, 246, 0.25));
+  padding: 48px 56px 36px;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.hero__subtitle {
+  font-size: 1rem;
+  color: #475569;
+  max-width: 560px;
+}
+
+/* Contenedor de las tarjetas: se comporta como grid responsive */
+.dashboard {
+  display: grid;
+  gap: 24px;
+  padding: 32px 56px 40px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* Apariencia compartida por cada sección de demostración */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 22px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: 0 15px 30px rgba(15, 23, 42, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 35px 55px rgba(15, 23, 42, 0.12);
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.card h2 {
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+  color: #0f172a;
+}
+
+/* Caja de color interactiva que responde a eventos */
+#colorBox {
+  width: 100%;
+  min-height: 120px;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 14px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.95rem;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+  color: white;
+  padding: 10px 18px;
+  box-shadow: 0 10px 18px rgba(14, 165, 233, 0.35);
+}
+
+.btn--primary:hover {
+  background: linear-gradient(135deg, #1d4ed8, #0284c7);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: #2563eb;
+  border: 1px solid rgba(37, 99, 235, 0.4);
+  padding: 10px 18px;
+}
+
+.btn--ghost:hover {
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.btn--accent {
+  background: linear-gradient(135deg, #ec4899, #f97316);
+  color: #fff;
+  padding: 12px 20px;
+  box-shadow: 0 12px 22px rgba(236, 72, 153, 0.3);
+}
+
+.btn--accent:hover {
+  background: linear-gradient(135deg, #db2777, #ea580c);
+}
+
+/* Espaciado y color del botón que limpia el saludo */
+#clearGreetingBtn {
+  margin-top: 10px;
+}
+
+/* Estilo del contador de letras mostradas al usuario */
+#charCount {
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Tarjeta del formulario: acomoda los elementos en columna */
+.card--form form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.card--form label {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.card--form input {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card--form input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.card--form .highlight {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.card--color label {
+  font-size: 0.9rem;
+  color: #475569;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.card--color select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  font-size: 0.95rem;
+}
+
+.card--button #clickMessage {
+  min-height: 32px;
+}
+
+.info-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(37, 99, 235, 0.08);
+  color: #1e293b;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+}
+
+.footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  padding: 18px 56px 32px;
+  text-align: center;
+  color: #475569;
+  background: #f1f5f9;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .hero,
+  .dashboard,
+  .footer {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+}
